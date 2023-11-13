@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url(https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Ftropical-beach&psig=AOvVaw0L5QUTe9u29dc2MJQMR2Pi&ust=1699951719315000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCLiJ-uPLwIIDFQAAAAAdAAAAABAE);
+    background-image: url('beach.jpg');
     background-size: cover;
 }
 
