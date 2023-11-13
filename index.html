@@ -27,5 +27,12 @@
     <footer>
         <p>Copyright &copy; 2022 My Blog</p>
     </footer>
+    <script>
+        document.querySelectorAll('nav button').forEach(button => {
+            button.addEventListener('click', event => {
+                alert(`You clicked the ${event.target.textContent} button`);
+            });
+        });
+    </script>
 </body>
 </html>
