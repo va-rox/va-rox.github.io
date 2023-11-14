@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+  </head>
+
+  <body>
+    <header>
+        <nav>
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='about.html'">About Me</button>
+            <button onclick="location.href='weather.html'">Weather API</button>
+        </nav>
+        <h1>Contact Me</h1>
+    </header>
+    <h1>Weather App</h1>
+    <form>
+      <label for="city">Enter city name:</label>
+      <input type="text" id="city" name="city">
+      <button type="submit">Get Weather</button>
+    </form>
+    <div id="weather"></div>
+
+    <script>
+      const form = document.querySelector('form');
+      const weatherDiv = document.querySelector('#weather');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const city = form.elements.city.value;
+        const apiKey = 'YOUR_API_KEY_HERE';
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+        try {
+          const response = await fetch(url);
+          const data = await response.json();
+          const { name, main: { temp, humidity } } = data;
+          weatherDiv.innerHTML = `<p>Current temperature in ${name}: ${temp}°C</p><p>Humidity: ${humidity}%</p>`;
+        } catch (error) {
+          console.error(error);
+          weatherDiv.innerHTML = '<p>Unable to fetch weather data</p>';
+        }
+      });
+    </script>
+    <footer>
+        <p>Copyright &copy; 2022 My Blog</p>
+    </footer>
+  </body>
+</html>
