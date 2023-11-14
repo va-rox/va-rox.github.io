@@ -56,3 +56,29 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+form input[type="text"] {
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+form input[type="submit"] {
+    height: 40px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #444;
+}
